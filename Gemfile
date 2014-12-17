@@ -38,3 +38,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'best_in_place', git: 'git://github.com/bernat/best_in_place.git', branch: 'master'
