@@ -1,12 +1,6 @@
 <%= best_in_place @user, :first_name %>
 
-
-<br>
-<p> research countries: </p>
-<%= best_in_place @user, :research_countries, place_holder: "click here to edit", as: :select, collection: Country.all.map {|i| i.name} %>
-
-
-
-<br>
+<p> event countries: </p>
+<%= best_in_place @user, :event_countries, place_holder: "click here to edit", as: :select, collection: Country.all.map {|i| i.name} %>
 
 <%= link_to "users index", users_path %>
