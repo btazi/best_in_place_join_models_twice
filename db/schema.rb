@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217152850) do
+ActiveRecord::Schema.define(version: 20141217153618) do
 
   create_table "countries", force: true do |t|
     t.string "name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20141217152850) do
   create_table "user_countries", force: true do |t|
     t.integer "user_id"
     t.integer "country_id"
+    t.boolean "event"
+    t.boolean "research"
   end
 
   add_index "user_countries", ["country_id"], name: "index_user_countries_on_country_id"
