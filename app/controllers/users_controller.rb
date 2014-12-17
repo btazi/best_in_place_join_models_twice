@@ -1,7 +1,11 @@
-class UserController < ActionController::Base
+class UsersController < ApplicationController
 
   respond_to :html, :json
-  before_action :get_user
+  before_action :get_user, only: [:show, :edit, :update]
+  before_action :get_users, only: [:index]
+
+  def index
+  end
 
   def show
   end
@@ -20,6 +24,9 @@ class UserController < ActionController::Base
     @user = User.find(params[:id])
   end
 
+  def get_users
+    @users = User.all
+  end
 
   def user_params
     params.require(:user).permit(:first_name)
