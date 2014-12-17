@@ -29,6 +29,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :event_countries => [])
+    params.require(:user).permit(:first_name, :event_countries => [:id, :name] )
   end
 end
